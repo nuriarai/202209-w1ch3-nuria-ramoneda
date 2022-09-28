@@ -60,6 +60,11 @@ meter {
     appearance: revert;
 }
 
+input[type="checkbox"] {
+    appearance: auto;
+    cursor: pointer;
+}
+
 /* reset default text opacity of input placeholder */
 ::placeholder {
     color: unset;
