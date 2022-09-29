@@ -1,6 +1,6 @@
 :root {
-    --main-color: #279989;
-    --sub-color: #5fa789;
+    --main-color: #185c53;
+    --sub-color: #107525;
     --secondary-color: #ffc845;
     --dark-color: #000;
     --light-color: #fff;
@@ -13,6 +13,10 @@ body {
     margin: 0 auto;
     max-width: 600px;
     font-size: 18px;
+    color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .sr-only:not(:focus):not(:active) {
@@ -25,18 +29,30 @@ body {
     width: 1px;
 }
 
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 30px;
     background-color: var(--main-color);
     color: var(--light-color);
     height: 150px;
     padding: 0 20px;
-}
-
-h1 {
-    font-size: 1.5rem;
 }
 
 nav .menu {
@@ -51,6 +67,20 @@ nav .menu {
 .menu li.current a {
     font-weight: 700;
     color: var(--secondary-color);
+}
+
+@media screen and (min-width: 540px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: unset;
+    }
+}
+main {
+    background-color: var(--secondary-color);
+    flex: 1;
 }
 
 .sub-header {
@@ -88,10 +118,9 @@ nav .menu {
 }
 
 .shop-list {
-    padding: 25px 20px;
+    padding: 25px 20px 40px;
     background-color: var(--secondary-color);
-    color: var(--dark-color);
-    height: calc(100vh - 150px - 90px);
+    flex: 1;
 }
 
 .shop-list .row {
@@ -122,6 +151,10 @@ input[type="checkbox"] {
     width: 23px;
     height: 23px;
 }
+.list-remove {
+    border: none;
+    background: none;
+}
 
 .row-right .price + .list-remove > .fa-plus {
     transform: rotate(45deg);
@@ -136,4 +169,46 @@ input[type="checkbox"] {
 }
 .shop-list .row.row-total .price {
     font-size: 1.4rem;
+}
+
+.add-form {
+    padding: 25px 20px 40px;
+}
+.add-form h2 {
+    margin-bottom: 30px;
+}
+
+.form input,
+.form label,
+.form button {
+    display: block;
+}
+.form label {
+    margin-bottom: 15px;
+}
+
+.form input[type="text"] {
+    width: 90%;
+    max-width: 375px;
+    height: 60px;
+    margin-bottom: 25px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+}
+
+.form input:nth-child(4) {
+    display: inline-block;
+}
+
+.form button[type="submit"] {
+    background-color: var(--main-color);
+    color: var(--light-color);
+    padding: 15px 10px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.form .currency {
+    margin-left: 10px;
+    font-size: 1.2rem;
 }
