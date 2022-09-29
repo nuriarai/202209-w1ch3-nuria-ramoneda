@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Lista de la compra" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+        <script
+            src="https://kit.fontawesome.com/dc7bdc40cf.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <title>Lista de la compra</title>
+    </head>
+    <body>
+        <header>
+            <h1>Lista de la compra</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="">Principal</a></li>
+                    <li class="current"><a href="index.html">Lista</a></li>
+                    <li><a href="">Acerca de</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="sub-header">
+                <a class="icon" href="index.html"
+                    ><span class="sr-only">Volver a lista</span
+                    ><i class="fa-solid fa-minus"></i
+                ></a>
+                <div class="buyed-data">
+                    <span class="buyed-items">2</span>/<span class="total-items"
+                        >3</span
+                    ><span> comprados</span>
+                </div>
+            </div>
+            <section class="add-form">
+                <h2>Añadir artículo</h2>
+                <form class="form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" />
+                    <label for="price" class="price">Precio:</label>
+                    <input type="text" id="price" /><span class="currency"></span>
+                        €</span
+                    >
+                    <button type="submit">Añadir artículo</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
